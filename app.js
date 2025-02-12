@@ -4,6 +4,20 @@
  * @version 2.0
  */
 
+//==================================================================
+//Registro do service worker
+
+//se o navegador de internet suportar este recurso
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('/sw.js')
+    .then(()=> {
+        console.log("Service worker resgistrado! ")
+    })
+
+}
+//==================================================================
+
 function calcular(){
     //calcular os valores das caixas de imput
     let gasolina = document.getElementById('gasolina').value 
